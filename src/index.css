@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy-950: #08111D;
+    --navy-900: #10243E;
+    --navy-800: #1B375C;
+    --steel-600: #3E5C76;
+    --steel-400: #7492AB;
+    --steel-200: #CBD7E3;
+    --amber-500: #F2A104;
+    --canvas-bg: #F4F6F8;
+    --canvas-card: #FFFFFF;
+    --ink-900: #0B1320;
+    --verified-green: #10B981;
+    --blocked-red: #EF4444;
+  }
+
+
+  body {
+    background-color: #F4F6F8;
+    color: #0B1320;
+    font-family: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: "Source Serif 4", Georgia, Cambria, "Times New Roman", serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: "JetBrains Mono", Consolas, "Courier Prime", monospace;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Precision Technical Blueprint Grid */
+.blueprint-grid {
+  background-size: 28px 28px;
+  background-image: 
+    linear-gradient(to right, rgba(62, 92, 118, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(62, 92, 118, 0.08) 1px, transparent 1px);
+}
+
+.blueprint-grid-dark {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Security Perimeter Dashed Enclosure */
+.perimeter-dashed {
+  border: 1.5px dashed rgba(242, 161, 4, 0.8) !important;
+  background-color: #FFFDF8;
+}
+
+.perimeter-dashed-steel {
+  border: 1.5px dashed rgba(62, 92, 118, 0.5) !important;
+}
+
+/* Precision Technical Corner Crosshairs */
+.corner-crosshairs {
+  position: relative;
+}
+.corner-crosshairs::before {
+  content: "+";
+  position: absolute;
+  top: -6px;
+  left: -5px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #F2A104;
+  line-height: 1;
+}
+.corner-crosshairs::after {
+  content: "+";
+  position: absolute;
+  bottom: -6px;
+  right: -5px;
+  font-family: monospace;
+  font-size: 14px;
+  color: #F2A104;
+  line-height: 1;
+}
+
+/* Control Room Panel Frame */
+.console-panel {
+  background-color: #FFFFFF;
+  border: 2px solid #10243E;
+  box-shadow: 2px 2px 0px rgba(16, 36, 62, 0.12);
+}
+
+.console-panel-dark {
+  background-color: #0B1726;
+  border: 2px solid #10243E;
+  color: #F4F6F8;
+}
+
+/* Precision Technical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #E2E8F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #3E5C76;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #10243E;
+}
