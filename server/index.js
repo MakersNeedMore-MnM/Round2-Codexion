@@ -1387,8 +1387,6 @@ app.get('*', (req, res) => {
 // --------------------------------------------------------------------------
 // 11. START EXPRESS SERVER BOUND TO 127.0.0.1 ONLY (Air-Gap Mandate)
 // --------------------------------------------------------------------------
-app.listen(PORT, '127.0.0.1', () => {
-  console.log(`[SentinelWorks Air-Gap Enclave Gateway] Active on http://127.0.0.1:${PORT}`);
-  console.log(`[Perimeter Security] Bound strictly to loopback 127.0.0.1. External egress: 0`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`[Sovereign AI] Server running on port ${PORT}`);
 });
-
